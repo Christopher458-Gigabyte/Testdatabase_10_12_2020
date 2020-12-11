@@ -1,0 +1,115 @@
+﻿@page
+@model Testdatabase_10_12_2020.Pages.Module.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Modules</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Modules.ReleaseDate" class="control-label"></label>
+                <input asp-for="Modules.ReleaseDate" class="form-control" />
+                <span asp-validation-for="Modules.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Modulnummer" class="control-label"></label>
+                <input asp-for="Modules.Modulnummer" class="form-control" />
+                <span asp-validation-for="Modules.Modulnummer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Modulname" class="control-label"></label>
+                <input asp-for="Modules.Modulname" class="form-control" />
+                <span asp-validation-for="Modules.Modulname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Semester" class="control-label"></label>
+                <input asp-for="Modules.Semester" class="form-control" />
+                <span asp-validation-for="Modules.Semester" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Workload" class="control-label"></label>
+                <input asp-for="Modules.Workload" class="form-control" />
+                <span asp-validation-for="Modules.Workload" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Semesterwochenstunden" class="control-label"></label>
+                <input asp-for="Modules.Semesterwochenstunden" class="form-control" />
+                <span asp-validation-for="Modules.Semesterwochenstunden" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Leistungspunkte" class="control-label"></label>
+                <input asp-for="Modules.Leistungspunkte" class="form-control" />
+                <span asp-validation-for="Modules.Leistungspunkte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Turnus" class="control-label"></label>
+                <input asp-for="Modules.Turnus" class="form-control" />
+                <span asp-validation-for="Modules.Turnus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Curriculare_Zuordnung" class="control-label"></label>
+                <input asp-for="Modules.Curriculare_Zuordnung" class="form-control" />
+                <span asp-validation-for="Modules.Curriculare_Zuordnung" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Lernziele" class="control-label"></label>
+                <input asp-for="Modules.Lernziele" class="form-control" />
+                <span asp-validation-for="Modules.Lernziele" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Schlüsselqualifikationen" class="control-label"></label>
+                <input asp-for="Modules.Schlüsselqualifikationen" class="form-control" />
+                <span asp-validation-for="Modules.Schlüsselqualifikationen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Inhaltliche_Beschreibung" class="control-label"></label>
+                <input asp-for="Modules.Inhaltliche_Beschreibung" class="form-control" />
+                <span asp-validation-for="Modules.Inhaltliche_Beschreibung" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Unterrichtsform" class="control-label"></label>
+                <input asp-for="Modules.Unterrichtsform" class="form-control" />
+                <span asp-validation-for="Modules.Unterrichtsform" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Prüfungsart" class="control-label"></label>
+                <input asp-for="Modules.Prüfungsart" class="form-control" />
+                <span asp-validation-for="Modules.Prüfungsart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Prüfungsform" class="control-label"></label>
+                <input asp-for="Modules.Prüfungsform" class="form-control" />
+                <span asp-validation-for="Modules.Prüfungsform" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Verbindlichkeit" class="control-label"></label>
+                <input asp-for="Modules.Verbindlichkeit" class="form-control" />
+                <span asp-validation-for="Modules.Verbindlichkeit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modules.Literaturangaben" class="control-label"></label>
+                <input asp-for="Modules.Literaturangaben" class="form-control" />
+                <span asp-validation-for="Modules.Literaturangaben" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

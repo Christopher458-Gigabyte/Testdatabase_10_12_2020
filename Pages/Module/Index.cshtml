@@ -1,0 +1,135 @@
+﻿@page
+@model Testdatabase_10_12_2020.Pages.Module.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].ReleaseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Modulnummer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Modulname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Semester)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Workload)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Semesterwochenstunden)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Leistungspunkte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Turnus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Curriculare_Zuordnung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Lernziele)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Schlüsselqualifikationen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Inhaltliche_Beschreibung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Unterrichtsform)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Prüfungsart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Prüfungsform)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Verbindlichkeit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Literaturangaben)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Modules) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modulnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modulname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Semester)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Workload)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Semesterwochenstunden)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Leistungspunkte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Turnus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Curriculare_Zuordnung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lernziele)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Schlüsselqualifikationen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inhaltliche_Beschreibung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unterrichtsform)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prüfungsart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prüfungsform)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Verbindlichkeit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Literaturangaben)
+            </td>
+
+           
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
